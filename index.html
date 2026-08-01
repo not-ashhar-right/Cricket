@@ -9,18 +9,9 @@
       <button
         class="hey"
         onclick="
-          myFunction();
-          let result;
-
-          if (comptchoice == 'ball') {
-            result = 'you have won the game';
-          } else if (comptchoice == 'bat') {
-            result = 'draw game';
-          } else if (comptchoice == 'stump') {
-            result = 'you have lost the game';
-          }
-
-          alert(`you choose bat,computer choose ${comptchoice} : ${result}`);
+          let comptchoice = myFunction();
+          let result=compare('bat', comptchoice);
+          alerting('bat', comptchoice, result);
         "
       >
         bat
@@ -29,15 +20,9 @@
         class="hey"
         
         onclick="
-          myFunction();
-          if (comptchoice == 'ball') {
-            result = 'draw game';
-          } else if (comptchoice == 'bat') {
-            result = 'you have lost the game';
-          } else if (comptchoice == 'stump') {
-            result = 'you have won the game';
-          }
-          alert(`you choose ball,computer choose ${comptchoice} : ${result}`);
+          comptchoice = myFunction();
+          result=compare('ball', comptchoice);
+          alerting('ball', comptchoice, result);
         "
       >
         ball
@@ -45,15 +30,9 @@
       <button
         class="hey"
         onclick="
-          myFunction();
-          if (comptchoice == 'ball') {
-            result = 'You have lost the game';
-          } else if (comptchoice == 'bat') {
-            result = 'you have won game';
-          } else if (comptchoice == 'stump') {
-            result = 'draw game';
-          }
-          alert(`you choose stump,computer choose ${comptchoice} : ${result}`);
+          comptchoice = myFunction();
+          result=compare('stump', comptchoice);
+          alerting('stump', comptchoice, result);
         "
       >
         stump
