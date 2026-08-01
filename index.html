@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hello">
+    <button class="hey"
+    onclick="
+    let comptchoice;
+    let result;
+    let num=Math.ceil(Math.random()*3);
+    if(num==1){
+      comptchoice='ball';
+      result='You have won the game';
+    }else if(num==2){
+      comptchoice='bat';
+      result='draw game';
+    }else if(num==3){
+      comptchoice='stump';
+      result='You have lost the game';
+    }
+    alert(`you choose bat,computer choose ${comptchoice} : ${result}`);
+    "
+    >  
+      bat
+    </button>
+    <button class="hey"
+    onclick="
+
+    num=Math.ceil(Math.random()*3);
+    if(num==1){
+      comptchoice='ball';
+      result='draw game';
+    }else if(num==2){
+      comptchoice='bat';
+      result='you have lost the game';
+    }else if(num==3){
+      comptchoice='stump';
+      result='You have won the game';
+    }
+    alert(`you choose ball,computer choose ${comptchoice} : ${result}`);
+
+    "
+    >
+      ball
+   </button>
+   <button class="hey"
+   onclick="
+
+    num=Math.ceil(Math.random()*3);
+    if(num==1){
+      comptchoice='ball';
+      result='You have lost the game';
+    }else if(num==2){
+      comptchoice='bat';
+      result='you have won game';
+    }else if(num==3){
+      comptchoice='stump';
+      result='draw game';
+    }
+    alert(`you choose stump,computer choose ${comptchoice} : ${result}`);
+
+    "
+   >
+      stump
+   </button>
+  </div>
+</body>
+</html>

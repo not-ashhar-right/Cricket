@@ -1,0 +1,15 @@
+.hello{
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.hey{
+  padding: 50px;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+body{
+  background-color: rgb(116, 221, 116);
+}
