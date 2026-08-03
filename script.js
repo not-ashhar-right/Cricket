@@ -69,10 +69,16 @@ function resetScore(){
   score.win=0;
   score.lose=0;
   score.draw=0;
+  alerting();
 }
 
 function alerting(userchoice, comptchoice, result){
   localStorage.setItem("score", JSON.stringify(score));
-  alert(`you choose ${userchoice},computer choose ${comptchoice} : ${result} 
-    ${score.resultDisplay()}`);
+  userchoice=userchoice!==undefined?userchoice:'';
+  comptchoice=comptchoice!==undefined?comptchoice:'';
+  result=result!==undefined?result:'';
+  document.querySelector('.idk').innerHTML=`you chose:${userchoice}<br> computer chose:${comptchoice}<br> ${result}`;
+  document.getElementById("win").innerHTML=`the number of matches won:${score.win}`;
+  document.getElementById("lose").innerHTML=`lost:${score.lose}`;
+  document.getElementById("draw").innerHTML=`drawn:${score.draw}`;
 }
