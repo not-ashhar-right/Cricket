@@ -10,7 +10,10 @@
   margin: 20px;
   border: 2px solid black;
   border-radius: 20px;
-  
+  cursor: pointer;
+}
+.hey:hover{
+  background-color: rgba(1, 255, 111, 0.527);
 }
 body{
   background-color: rgb(116, 221, 116);
@@ -33,9 +36,13 @@ body{
   font-size: 20px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 
 }
 .say{
   display: flex;
   justify-content: center;
+}
+.am:hover{
+  background-color: rgba(243, 16, 255, 0.527);
 }
