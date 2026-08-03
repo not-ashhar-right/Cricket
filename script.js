@@ -1,11 +1,15 @@
 let score={
+    
     win:0,
     lose:0,
     draw:0,
-    resultDisplay:function(){
+  }
+  if(localStorage.getItem("score")){
+    score=JSON.parse(localStorage.getItem("score"));
+  }
+  score.resultDisplay=function(){
       return `the number of matches won:${score.win},lost:${score.lose},draw:${score.draw}`;
     }
-  }
 
 function myFunction() {
   
@@ -60,7 +64,15 @@ function compare(userchoice, comptchoice) {
   }
 }
 
+function resetScore(){
+  localStorage.clear();
+  score.win=0;
+  score.lose=0;
+  score.draw=0;
+}
+
 function alerting(userchoice, comptchoice, result){
+  localStorage.setItem("score", JSON.stringify(score));
   alert(`you choose ${userchoice},computer choose ${comptchoice} : ${result} 
     ${score.resultDisplay()}`);
 }
